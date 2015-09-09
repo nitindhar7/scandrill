@@ -1,5 +1,6 @@
 *.class
 *.log
+RELEASING
 
 # sbt specific
 .cache
