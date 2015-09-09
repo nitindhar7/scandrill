@@ -1,7 +1,3 @@
-import SonatypeKeys._
-
-sonatypeSettings
-
 name := "scandrill"
 
 organization := "com.nitindhar"
@@ -12,19 +8,30 @@ description := "Scala client for Mandrill App"
 
 scalaVersion := "2.11.5"
 
-scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature")
+scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature", "-Ylog-classpath")
 
 resolvers += Resolver.typesafeRepo("releases")
 
 parallelExecution in Test := true
 
 libraryDependencies ++= Seq(
-   "com.typesafe.play" % "play-json_2.11" % "2.4.3"
+  "com.typesafe.play" %% "play-json"       % "2.3.10",
+  "com.typesafe.play" %% "play-ws"         % "2.3.10",
+  "com.typesafe.play" %% "play-functional" % "2.3.10",
+  "org.scalatest"     %% "scalatest"       % "2.2.4"     % "test"
 )
 
 publishArtifact in Test := false
 
 publishMavenStyle := true
+
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
 
 pomIncludeRepository := { _ => false }
 
