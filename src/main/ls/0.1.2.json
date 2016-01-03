@@ -1,0 +1,29 @@
+{
+  "organization" : "com.nitindhar",
+  "name" : "scandrill",
+  "version" : "0.1.2-SNAPSHOT",
+  "description" : "Scala client for Mandrill App",
+  "site" : "",
+  "tags" : [ "mandrill", "app", "api", "scala", "client", "library", "async", "mailchimp" ],
+  "docs" : "https://github.com/nitindhar7/scandrill",
+  "resolvers" : [ "https://oss.sonatype.org/content/repositories/releases" ],
+  "dependencies" : [ {
+    "organization" : "com.typesafe.play",
+    "name" : "play-json",
+    "version" : "2.3.10"
+  }, {
+    "organization" : "com.typesafe.play",
+    "name" : "play-ws",
+    "version" : "2.3.10"
+  }, {
+    "organization" : "com.typesafe.play",
+    "name" : "play-functional",
+    "version" : "2.3.10"
+  } ],
+  "scalas" : [ "2.10.4" ],
+  "licenses" : [ {
+    "name" : "MIT",
+    "url" : "https://raw.githubusercontent.com/nitindhar7/scandrill/master/LICENSE"
+  } ],
+  "sbt" : false
+}

@@ -1,5 +1,7 @@
 import ReleaseTransformations._
 
+seq(lsSettings: _*)
+
 name := "scandrill"
 
 organization := "com.nitindhar"
@@ -20,6 +22,14 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-functional" % "2.3.10",
   "org.scalatest"     %% "scalatest"       % "2.2.4"     % "test"
 )
+
+(LsKeys.tags in LsKeys.lsync) := Seq("mandrill", "app", "api", "scala", "client", "library", "async", "mailchimp")
+
+(LsKeys.docsUrl in LsKeys.lsync) := Some(url("https://github.com/nitindhar7/scandrill"))
+
+licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/nitindhar7/scandrill/master/LICENSE"))
+
+homepage := Some(url("https://github.com/nitindhar7/scandrill"))
 
 publishArtifact in Test := false
 
