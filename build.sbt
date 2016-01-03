@@ -4,13 +4,11 @@ name := "scandrill"
 
 organization := "com.nitindhar"
 
-version := "0.0.1-SNAPSHOT"
-
 description := "Scala client for Mandrill App"
 
 scalaVersion := "2.11.5"
 
-scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature", "-Ylog-classpath")
+scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature")
 
 resolvers += Resolver.typesafeRepo("releases")
 

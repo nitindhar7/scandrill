@@ -2,6 +2,8 @@
 
 Scandrill is an async Scala client for the [MandrillApp API](https://mandrillapp.com/api/docs/).
 
+[![Build Status](https://travis-ci.org/nitindhar7/scandrill.png)](https://travis-ci.org/nitindhar7/scandrill)
+
 ## Getting Scandrill
 
 The release versions of Scandrill are built against Scala 2.11.x
