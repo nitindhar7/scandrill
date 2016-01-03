@@ -22,7 +22,7 @@ You can also find direct download links at the bottom of that page. Choose the f
 ```scala
 import com.nitindhar.scandrill.client._
 
-val scandrill = Scandrill("https://mandrillapp.com/api/1.0", API-KEY, DEFAULT-FROM-EMAIL, DEFAULT-FROM-NAME) // build the client
+val scandrill = Scandrill("https://mandrillapp.com/api/1.0", API-KEY, DEFAULT-FROM-EMAIL, DEFAULT-FROM-NAME)
 ```
 
 Using the Scandrill client
@@ -31,7 +31,6 @@ Using the Scandrill client
 import com.nitindhar.scandrill.client._
 import com.nitindhar.scandrill.models._
 
-// sendMessage(template: String, subject: String, to: List[String]): Future[Either[ScandrillException, List[ScandrillResponse]]]
 val template = render("welcome-email-template") // render your template to a string using whichever way you prefer
 val subject = "Welcome Friend!"
 val to = List("hello@world.com")
