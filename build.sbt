@@ -1,8 +1,10 @@
+import ReleaseTransformations._
+
 name := "scandrill"
 
 organization := "com.nitindhar"
 
-version := "0.0.1"
+version := "0.0.1-SNAPSHOT"
 
 description := "Scala client for Mandrill App"
 
@@ -32,6 +34,21 @@ publishTo := {
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
+
+releaseProcess := Seq[ReleaseStep](
+  checkSnapshotDependencies,
+  inquireVersions,
+  runClean,
+  runTest,
+  setReleaseVersion,
+  commitReleaseVersion,
+  tagRelease,
+  ReleaseStep(action = Command.process("publishSigned", _)),
+  setNextVersion,
+  commitNextVersion,
+  ReleaseStep(action = Command.process("sonatypeReleaseAll", _)),
+  pushChanges
+)
 
 pomIncludeRepository := { _ => false }
 
